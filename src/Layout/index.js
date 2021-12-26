@@ -5,6 +5,11 @@ import Home from "./Home/Home";
 import NotFound from "./NotFound";
 
 function Layout() {
+  const [deckLength, setDeckLength] = useState(0);
+  const updateDecks = (newDecks) => {
+    setDeckLength(() => deckLength + newDecks)
+  }
+  
   return (
     <>
       <Header />
