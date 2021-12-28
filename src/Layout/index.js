@@ -16,8 +16,10 @@ function Layout() {
       <Header />
       <div className='container'>
         <Switch>
+          {/* Home component */}
           <Route exact path='/'>
             <Link to='/decks/new'>
+              {/* Create new button */}
               <button className='btn btn-secondary'>
                 <i className='fas fa-plus'></i> Create Deck
               </button>
@@ -25,30 +27,37 @@ function Layout() {
             <Home />
           </Route>
 
+          {/* Create Deck Component */}
           <Route exact path='/decks/new'>
             <CreateDeck />
           </Route>
 
+          {/* Study Deck Component */}
           <Route exact path='/decks/:deckId/study'>
             <StudyDeck />
           </Route>
 
+          {/* EditDeck Component */}
           <Route exact path='/decks/:deckId/edit'>
             <EditDeck />
           </Route>
 
+          {/* View Deck Component */}
           <Route exact path='/decks/:deckId'>
             <ViewDeck />
           </Route>
 
+          {/* Add Card Component */}
           <Route exact path='/decks/:deckId/cards/new'>
             <AddCard />
           </Route>
 
+          {/* Edit Card Component */}
           <Route exact path='/decks/:deckId/cards/:cardId/edit'>
             <EditCard />
           </Route>
 
+          {/* Not Found 404 Component */}
           <Route>
             <NotFound />
           </Route>

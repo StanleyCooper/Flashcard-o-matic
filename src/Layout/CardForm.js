@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
+// Form component for adding new card
 function CardForm({ deckId, newCardData, changeHandler, submitHandler }) {
   const history = useHistory();
   return (

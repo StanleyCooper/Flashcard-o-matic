@@ -3,6 +3,7 @@ import { useParams, Link, useHistory } from 'react-router-dom';
 import { readDeck, readCard, updateCard } from '../utils/api';
 import CardForm from './CardForm';
 
+// Component for edit card screen
 function EditCard() {
   const mountedRef = useRef(false);
   const { deckId, cardId } = useParams();

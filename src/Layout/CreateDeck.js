@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { createDeck } from '../utils/api';
 
+
+// component for creating new deck
 function CreateDeck() {
   const initialFormState = {
     name: '',

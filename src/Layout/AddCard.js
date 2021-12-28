@@ -3,8 +3,11 @@ import { Link, useParams, useHistory } from 'react-router-dom';
 import { readDeck, createCard } from '../utils/api';
 import CardForm from './CardForm';
 
+
+// React component for AddCard screen
 function AddCard() {
   const mountedRef = useRef(false);
+  // Default for new card data
   const initialFormState = {
     id: '',
     front: '',
@@ -19,7 +22,7 @@ function AddCard() {
   const [newCardData, setNewCardData] = useState(initialFormState);
   const history = useHistory();
   const { deckId } = useParams();
-  // effect just for tracking mounted state
+  // effect just for tracking state
   useEffect(() => {
     mountedRef.current = true;
     return () => {
@@ -27,6 +30,7 @@ function AddCard() {
     };
   }, []);
 
+  // Load deck effect
   useEffect(() => {
     const abortController = new AbortController();
     async function loadDeck() {
@@ -47,6 +51,7 @@ function AddCard() {
     };
   }, [deckId]);
 
+  // change handler for new card data changes
   const changeHandler = ({ target }) => {
     setNewCardData((currentState) => ({
       ...currentState,
@@ -54,6 +59,7 @@ function AddCard() {
     }));
   };
 
+  // submit handler to submit new card data
   const submitHandler = async (event) => {
     event.preventDefault();
     await createCard(deckId, newCardData);

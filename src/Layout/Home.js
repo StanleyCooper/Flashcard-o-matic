@@ -2,11 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { deleteDeck, listDecks } from '../utils/api/index.js';
 
+// Component for Home screen
 function Home() {
   const mountedRef = useRef(false);
   const [decks, setDecks] = useState([]);
   const history = useHistory();
 
+  // Effects
   useEffect(() => {
     mountedRef.current = true;
     return () => {
@@ -33,6 +35,7 @@ function Home() {
     return () => abortController.abort();
   }, []);
 
+  // Handlers
   const deleteHandler = async (deckId) => {
     const confirmation = window.confirm(
       'Delete this deck? You will not be able to recover it.'
@@ -43,6 +46,7 @@ function Home() {
     }
   };
 
+  // map out JSX for to display all decks retreived as stylized cards
   const styledDecks = decks.map((deck) => (
     <div
       key={deck.id}
@@ -85,6 +89,7 @@ function Home() {
     </div>
   ));
 
+  // return decks
   return decks ? (
     <React.Fragment>{styledDecks}</React.Fragment>
   ) : (

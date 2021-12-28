@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { readDeck, updateDeck } from '../utils/api';
 
+// Component for edit deck component
 function EditDeck() {
   const mountedRef = useRef(false);
   const initialState = { name: '', description: '' };
@@ -10,6 +11,7 @@ function EditDeck() {
   const { deckId } = useParams();
   const history = useHistory();
 
+  // effect for mounted ref changes
   useEffect(() => {
     mountedRef.current = true;
     return () => {
@@ -17,6 +19,7 @@ function EditDeck() {
     };
   }, []);
 
+  // effect to grab deck information from server
   useEffect(() => {
     const abortController = new AbortController();
     async function loadDeck() {
@@ -38,6 +41,7 @@ function EditDeck() {
     };
   }, [deckId]);
 
+  // Handlers
   const changeHandler = ({ target }) => {
     setEditDeckFormData((currentState) => ({
       ...currentState,
