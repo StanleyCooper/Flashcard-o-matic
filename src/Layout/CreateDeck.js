@@ -13,6 +13,7 @@ function CreateDeck() {
   const [formData, setFormData] = useState(initialFormState);
   const history = useHistory();
 
+  // Change handler for form input changes
   const onChangeHandler = ({ target }) => {
     setFormData((currentFormData) => ({
       ...currentFormData,
@@ -20,6 +21,7 @@ function CreateDeck() {
     }));
   };
 
+  // Submit handler for form submittal
   const submitHandler = async (event) => {
     event.preventDefault();
     const response = await createDeck(formData);
