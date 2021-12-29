@@ -56,7 +56,7 @@ function EditDeck() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <nav aria-label='breadcrumb'>
         <ol className='breadcrumb'>
           <li className='breadcrumb-item'>
@@ -119,7 +119,7 @@ function EditDeck() {
           Submit
         </button>
       </form>
-    </React.Fragment>
+    </>
   );
 }
 

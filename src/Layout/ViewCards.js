@@ -42,14 +42,14 @@ function ViewCards({ cards = [] }) {
     </div>
   ));
   return (
-    <React.Fragment>
+    <>
       <div className='card'>
         <div className='card-header text-center'>
           <h2 className='text-center'>Cards</h2>
         </div>
       </div>
       {styledCards}
-    </React.Fragment>
+    </>
   );
 }
 

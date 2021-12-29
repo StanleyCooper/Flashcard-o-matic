@@ -12,7 +12,7 @@ import EditCard from './EditCard';
 
 function Layout() {
   return (
-    <React.Fragment>
+    <>
       <Header />
       <div className='container'>
         <Switch>
@@ -63,7 +63,7 @@ function Layout() {
           </Route>
         </Switch>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

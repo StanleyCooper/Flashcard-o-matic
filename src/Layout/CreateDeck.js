@@ -30,7 +30,7 @@ function CreateDeck() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <nav aria-label='breadcrumb'>
         <ol className='breadcrumb'>
           <li className='breadcrumb-item'>
@@ -84,7 +84,7 @@ function CreateDeck() {
           Submit
         </button>
       </form>
-    </React.Fragment>
+    </>
   );
 }
 

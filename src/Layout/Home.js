@@ -91,11 +91,10 @@ function Home() {
 
   // return decks
   return decks ? (
-    <React.Fragment>{styledDecks}</React.Fragment>
+    <>{styledDecks}</>
   ) : (
     <p>Loading...</p>
   );
 }
 
 export default Home;
-Home

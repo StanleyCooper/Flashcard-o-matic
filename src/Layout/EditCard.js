@@ -79,7 +79,7 @@ function EditCard() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <nav aria-label='breadcrumb'>
         <ol className='breadcrumb'>
           <li className='breadcrumb-item'>
@@ -102,7 +102,7 @@ function EditCard() {
         newCardData={editCard}
         deckId={deckId}
       />
-    </React.Fragment>
+    </>
   );
 }
 
