@@ -13,6 +13,18 @@ This project was designed to test my ability to work with rending and state mana
 - Using hooks like useState(), useParams(), and useHistory()
 - Debugging React code through console output and using the VS Code debugger
 
+## Instructions 
+To launch the app, please clone this repository and open up to it's directory.
+
+In the command line, run:
+~~~
+npm install
+~~~
+then run:
+~~~
+npm start
+~~~
+
 ## Acknowledgements 
 
 Starter code, tests, and challenege were created by the Thinkful Team for the Engineering Flex program. Only commits made within this repository are my own work.
@@ -21,5 +33,6 @@ Starter code, tests, and challenege were created by the Thinkful Team for the En
 
 ## Deployment
 
-App has been deployed with Heroku and can be accessed [here](https://flash-o-matic.herokuapp.com/)
+App frontend has been deployed with Heroku and can be accessed [here](https://flash-o-matic.herokuapp.com/). 
+Please note: API needs to be launched in order for app to be functional
 
